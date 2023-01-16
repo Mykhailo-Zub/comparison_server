@@ -1,0 +1,19 @@
+{
+  "name": "product_comparison_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "js-levenshtein": "^1.1.6",
+    "serpapi": "^0.0.8"
+  }
+}
