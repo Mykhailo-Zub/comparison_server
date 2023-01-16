@@ -20,7 +20,7 @@ import getStoreResults from "./serpApiHandler.js";
 
 const ebayFiltering = (query, accuracy, results) => {
   return results
-    .filter((result) => {
+    ?.filter((result) => {
       const { title, condition, price } = result;
       const extractedPrice = price?.extracted;
       if (100 - levenshtein(query, title) >= accuracy && condition === "Brand New" && extractedPrice) {
@@ -35,7 +35,7 @@ const ebayFiltering = (query, accuracy, results) => {
 
 const walmartFiltering = (query, accuracy, results) => {
   return results
-    .filter((result) => {
+    ?.filter((result) => {
       const { title, primary_offer } = result;
       const extractedPrice = primary_offer.offer_price || primary_offer.min_price;
       if (100 - levenshtein(query, title) >= accuracy && extractedPrice) {
