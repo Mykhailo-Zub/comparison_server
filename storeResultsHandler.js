@@ -22,7 +22,7 @@ const ebayFiltering = (query, accuracy, results) => {
   return results
     .filter((result) => {
       const { title, condition, price } = result;
-      const extractedPrice = price.extracted;
+      const extractedPrice = price?.extracted;
       if (100 - levenshtein(query, title) >= accuracy && condition === "Brand New" && extractedPrice) {
         return true;
       } else return false;
